@@ -1,0 +1,33 @@
+{
+  "cwd": "/Users/yusuke.miyauchi.vt/Desktop/cordova_hw",
+  "type": [
+    "web",
+    "cordova"
+  ],
+  "name": "hello world",
+  "pkg": "com.cordovaHW.HW",
+  "framework": "core",
+  "template": "single-view",
+  "bundler": "vite",
+  "cssPreProcessor": "scss",
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen"
+    ]
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}
