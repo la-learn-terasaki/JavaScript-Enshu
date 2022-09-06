@@ -18,9 +18,6 @@ import store from './store.js';
 // Import main app component
 import App from '../app.f7';
 
-// custom js
-import camera from './camera'
-
 var device = getDevice();
 var app = new Framework7({
   name: 'hello world', // App name
@@ -32,8 +29,6 @@ var app = new Framework7({
   store: store,
   // App routes
   routes: routes,
-
-  camera: camera,
 
   // Input settings
   input: {
