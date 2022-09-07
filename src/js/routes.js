@@ -21,13 +21,10 @@ var routes = [
     path: '/form/',
     component: FormPage,
   },
-
   {
     path: '/study/',
     component: StudyPage,
   },
-
-
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
     component: DynamicRoutePage,
