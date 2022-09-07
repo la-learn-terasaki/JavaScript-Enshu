@@ -1,0 +1,15 @@
+<template>
+<div class="page" data-name="study">
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                    戻る
+                </a>
+            </div>
+            <div class="title">JS学習用ページ</div>
+        </div>
+    </div>
+</div>
+</template>
