@@ -2,6 +2,7 @@
 import HomePage from '../pages/home.f7';
 import AboutPage from '../pages/about.f7';
 import FormPage from '../pages/form.f7';
+import StudyPage from '../pages/study.f7';
 
 import DynamicRoutePage from '../pages/dynamic-route.f7';
 import RequestAndLoad from '../pages/request-and-load.f7';
@@ -20,6 +21,12 @@ var routes = [
     path: '/form/',
     component: FormPage,
   },
+
+  {
+    path: '/study/',
+    component: StudyPage,
+  },
+
 
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
