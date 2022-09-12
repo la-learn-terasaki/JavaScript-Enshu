@@ -11,5 +11,24 @@
             <div class="title">JS学習用ページ</div>
         </div>
     </div>
+
+    <div class="page-content">
+        <div class="study-page">
+            <div class="study-text">
+                <p @click="${popup}">
+                    test
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 </template>
+
+<script>
+    export default () => {
+     const popup = () => {
+        alert("test");
+    };
+    return $render;
+    }
+</script>
