@@ -16,8 +16,11 @@
         <div class="study-page">
             <div class="study-text">
                 <p @click="${popup}">
-                    test
+                    アラートを出力します
                 </p>
+            </div>
+            <div class="study-photo">
+                <img src="../../public/photo/test.png" />
             </div>
         </div>
     </div>
