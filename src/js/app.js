@@ -8,7 +8,7 @@ import 'framework7/css/bundle';
 //反映させたいcssファイルをインポートする
 import '../css/icons.css';
 import '../css/app.scss';
-import '../css/study.css';
+import '../css/study.scss';
 // Import Cordova APIs
 import cordovaApp from './cordova-app.js';
 
@@ -31,7 +31,6 @@ var app = new Framework7({
   store: store,
   // App routes
   routes: routes,
-
 
   // Input settings
   input: {
