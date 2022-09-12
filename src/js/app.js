@@ -5,8 +5,10 @@ import Framework7, { getDevice } from 'framework7/bundle';
 import 'framework7/css/bundle';
 
 // Import Icons and App Custom Styles
+//反映させたいcssファイルをインポートする
 import '../css/icons.css';
 import '../css/app.scss';
+import '../css/study.css';
 // Import Cordova APIs
 import cordovaApp from './cordova-app.js';
 
@@ -29,6 +31,7 @@ var app = new Framework7({
   store: store,
   // App routes
   routes: routes,
+
 
   // Input settings
   input: {
