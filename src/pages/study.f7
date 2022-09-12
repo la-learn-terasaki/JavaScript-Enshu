@@ -1,33 +1,31 @@
 <template>
-    <div class="page" data-name="study">
-        <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner sliding">
-                <div class="left">
-                    <a href="#" class="link back">
-                        戻る
-                    </a>
-                </div>
-                <div class="title">JS学習用ページ</div>
-            </div>
+  <div class="page" data-name="study">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            戻る
+          </a>
         </div>
-        <div class="page-content">
-            <div class="study-page">
-                <div class="study-text">
-                    <p @click="${popup}">
-                        アラートを出力します
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div class="title">JS学習用ページ</div>
+      </div>
     </div>
+    <div class="page-content">
+      <div class="study-text">
+        <p @click="${popup}">
+          アラートを出力します
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default () => {
-     const popup = () => {
-        alert("test");
+  export default () => {
+    const popup = () => {
+      alert("test");
     };
     return $render;
-    }
+  }
 </script>
