@@ -1,6 +1,8 @@
 
 .study-text {
-    text-align:center;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
 }
 .study-page{
     margin:10px
