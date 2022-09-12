@@ -7,6 +7,7 @@ import 'framework7/css/bundle';
 // Import Icons and App Custom Styles
 import '../css/icons.css';
 import '../css/app.scss';
+import '../css/study.scss'
 // Import Cordova APIs
 import cordovaApp from './cordova-app.js';
 
@@ -47,6 +48,12 @@ var app = new Framework7({
         // Init cordova APIs (see cordova-app.js)
         cordovaApp.init(f7);
       }
+      store.state.image = {
+        "image_data": {
+          "image_url": "..\/..\/img\/studyIcon\/0a16fa82381c4bb981d07841408329f1_t.jpeg",
+          "link_path": "/home/"
+        }
+      };
     },
   },
 });
