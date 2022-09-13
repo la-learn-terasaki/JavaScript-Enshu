@@ -25,10 +25,10 @@
 </template>
 
 <script>
-  export default (pops, { $store, $update }) => {
+  export default (props, { $store, $update }) => {
 
     let studyItem = []
-    let  imageUrl =[]
+    let imageUrl =[]
 
     const popup = () => {
       alert("test");
