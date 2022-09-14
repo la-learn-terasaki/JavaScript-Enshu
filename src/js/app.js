@@ -51,8 +51,18 @@ var app = new Framework7({
       }
       store.state.image = {
         "image_data": {
-          "image_url": "..\/..\/img\/studyIcon\/0a16fa82381c4bb981d07841408329f1_t.jpeg",
-          "link_path": "/home/"
+          "image1": {
+            "image_url": "..\/..\/img\/studyIcon\/0a16fa82381c4bb981d07841408329f1_t.jpeg",
+            "link_path": "/"
+          },
+          "image2": {
+            "image_url": "..\/img\/studyIcon\/51bb32664f5d1c379c45d348939eee4b_t.jpeg",
+            "link_path": "/form/"
+          },
+          "image3": {
+            "image_url": "..\/img\/studyIcon\/cc46614da92cf990a3609ffa2d1f3e0e_t.jpeg",
+            "link_path": "/about/"
+          }
         }
       };
     },
