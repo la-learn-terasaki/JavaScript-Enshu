@@ -18,14 +18,16 @@
         </p>
       </div>
       <div>
-        ${imageUrl[0] && $h`        
-        ${imageUrl.map((item) => $h`
-        <div class="study-photo">
-          <a href="${item.link_path}">
-            <img src="${item.image_url}"/>
-          </a>
+        ${imageUrl[0] && $h`
+        <div>
+          ${imageUrl.map((item) => $h`
+          <div class="study-photo">
+            <a href="${item.link_path}">
+              <img src="${item.image_url}"/>
+            </a>
+          </div>
+          `)}
         </div>
-        `)}
         `}
       </div>
     </div>
@@ -38,17 +40,17 @@
     let studyItem = []
     let imageUrl = []
 
-    //アラートの作成
+    // アラートの作成
     const popup = () => {
       alert("test");
     };
 
-    //イメージファイルの描画処理
+    // イメージファイルの描画処理
     getStudyItem()
     function getStudyItem() {
       studyItem.push($store.state.image.image_data)
       console.log("study",studyItem)
-      for(var i = 0; i < studyItem.length; i++){
+      for(let i = 0; i < studyItem.length; i++){
         imageUrl.push(studyItem[i].image1)
         imageUrl.push(studyItem[i].image2)
         imageUrl.push(studyItem[i].image3)
