@@ -17,8 +17,16 @@
           アラートを出力します
         </p>
       </div>
-      <div class="study-photo">
-        <img src="${imageUrl}"/>
+      <div>
+        ${imageUrl[0] && $h`        
+        ${imageUrl.map((item) => $h`
+        <div class="study-photo">
+          <a href="${item.link_path}">
+            <img src="${item.image_url}"/>
+          </a>
+        </div>
+        `)}
+        `}
       </div>
     </div>
   </div>
@@ -30,16 +38,20 @@
     let studyItem = []
     let imageUrl = []
 
+    //アラートの作成
     const popup = () => {
       alert("test");
     };
 
+    //イメージファイルの描画処理
     getStudyItem()
     function getStudyItem() {
       studyItem.push($store.state.image.image_data)
       console.log("study",studyItem)
       for(var i = 0; i < studyItem.length; i++){
-        imageUrl.push(studyItem[i].image_url)
+        imageUrl.push(studyItem[i].image1)
+        imageUrl.push(studyItem[i].image2)
+        imageUrl.push(studyItem[i].image3)
         console.log("imageUrl",imageUrl)
       }
       $update();
