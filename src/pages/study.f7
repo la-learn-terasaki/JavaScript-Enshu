@@ -17,15 +17,34 @@
           アラートを出力します
         </p>
       </div>
+      <div class="study-photo">
+        <img src="${imageUrl}"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default () => {
+  export default (props, { $store, $update }) => {
+
+    let studyItem = []
+    let imageUrl = []
+
     const popup = () => {
       alert("test");
     };
+
+    getStudyItem()
+    function getStudyItem() {
+      studyItem.push($store.state.image.image_data)
+      console.log("study",studyItem)
+      for(var i = 0; i < studyItem.length; i++){
+        imageUrl.push(studyItem[i].image_url)
+        console.log("imageUrl",imageUrl)
+      }
+      $update();
+    };
+
     return $render;
   }
 </script>
