@@ -19,14 +19,25 @@
       </div>
       <div>
         ${imageUrl[0] && $h`
-        <div>
-          ${imageUrl.map((item) => $h`
-          <div class="study-photo">
-            <a href="${item.link_path}">
-              <img src="${item.image_url}"/>
-            </a>
+        <div
+        class="swiper swiper-init"
+        data-pagination='{"el": ".swiper-pagination"}'  
+        data-navigation='{"nextEl":".swiper-button-next", "prevEl":".swiper-button-prev"}'
+        >
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            ${imageUrl.map((item) => $h`
+            <div class="swiper-slide">            
+              <div class="study-photo">
+                <a href="${item.link_path}">
+                  <img src="${item.image_url}"/>
+                </a>
+              </div>           
+            </div>
+            `)}
           </div>
-          `)}
         </div>
         `}
       </div>
