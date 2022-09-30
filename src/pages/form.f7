@@ -76,7 +76,7 @@
 </template>
 <script>
 export default () => {
-  
+
 // フォームをローカルストレージに保存
 const setForm = () =>{
   // formのDOMを取得
@@ -96,7 +96,7 @@ const setForm = () =>{
 
   // JSONデータをローカルストレージに格納
   localStorage.setItem('formJson', formJson);
-  var localData = localStorage.getItem('formJson');
+  let localData = localStorage.getItem('formJson');
   console.log("localData", localData);
 };
 
