@@ -135,9 +135,9 @@
     // フォーム内容を取得
     getForm()
     function getForm() {
-      if (window.localStorage) {
+      let localForm = localStorage.getItem('formJson');
+      if (localForm) {
         // ローカルストレージからJSONデータを取得
-        let localForm = localStorage.getItem('formJson');
         console.log("localForm", localForm);
 
         // JSONデータをオブジェクトに変換
@@ -147,6 +147,16 @@
         // オブジェクトの値を配列として格納
         forms.push(array)
         console.log("forms", forms);
+      }
+      else {
+        let nullForm = new Object();
+        nullForm.name = "";
+        nullForm.email = "";
+        nullForm.url = "";
+        nullForm.password = "";
+        nullForm.phone = "";
+        console.log("nullForm", nullForm)
+        forms.push(array)
       };
       $update();
     };
