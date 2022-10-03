@@ -41,6 +41,66 @@
         </div>
         `}
       </div>
+      <div class="list no-hairlines-md">
+        ${forms[0] && $h`
+        <div>
+          ${forms.map((item) => $h`
+          <ul>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Name</div>
+                  <div class="item-input-wrap">
+                    <input type="text" name="name" value="${item.name}" placeholder="Your name"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">E-mail</div>
+                  <div class="item-input-wrap">
+                    <input type="email" name="email" value="${item.email}" placeholder="E-mail"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">URL</div>
+                  <div class="item-input-wrap">
+                    <input type="url" name="url" value="${item.url}" placeholder="URL"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Password</div>
+                  <div class="item-input-wrap">
+                    <input type="password" name="password" value="${item.password}" placeholder="Password"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Phone</div>
+                  <div class="item-input-wrap">
+                    <input type="tel" name="phone" value="${item.phone}" placeholder="Phone"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          `)}
+        </div>
+        `}
+      </div>
     </div>
   </div>
 </template>
@@ -50,6 +110,8 @@
 
     let studyItem = []
     let imageUrl = []
+    let array = []
+    let forms = []
 
     // アラートの作成
     const popup = () => {
@@ -70,6 +132,40 @@
       $update();
     };
 
+    // フォーム内容を取得
+    getForm()
+    function getForm() {
+      let localForm = localStorage.getItem('formJson');
+      if (localForm) {
+        // ローカルストレージからJSONデータを取得
+        console.log("localForm", localForm);
+
+        // JSONデータをオブジェクトに変換
+        array = JSON.parse(localForm);
+        console.log("array", array);
+        
+        // オブジェクトの値を配列として格納
+        forms.push(array)
+        console.log("forms", forms);
+      }
+      else {
+        let nullForm = new Object();
+        nullForm.name = "";
+        nullForm.email = "";
+        nullForm.url = "";
+        nullForm.password = "";
+        nullForm.phone = "";
+        console.log("nullForm", nullForm)
+        forms.push(array)
+      };
+      $update();
+    };
     return $render;
   }
 </script>
+
+<!-- memo
+今後実装するかも
+・mapでラベル名と値を入力できるようにする
+　⇒ローカルストレージに入れる段階でラベル用と値用にデータを入力する（参考：app.js）
+-->
