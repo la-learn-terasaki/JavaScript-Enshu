@@ -1,7 +1,6 @@
 
 <template>
   <div id="app">
-
     <!-- Left panel with cover effect-->
     <div class="panel panel-left panel-cover dark panel-init">
       <div class="view">
