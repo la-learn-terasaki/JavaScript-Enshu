@@ -16,3 +16,14 @@
   margin-top: 10px;
   border : 1px solid black ;
 }
+
+:root {
+  // パネルの表示範囲を指定
+  --f7-panel-width: 30%;
+}
+
+.pagePanel{
+  width: 30%;
+  
+}
+
