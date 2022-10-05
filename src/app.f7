@@ -1,7 +1,6 @@
 
 <template>
   <div id="app">
-
     <!-- Left panel with cover effect-->
     <div class="panel panel-left panel-cover dark panel-init">
       <div class="view">
@@ -18,18 +17,50 @@
         </div>
       </div>
     </div>
+
     <!-- Right panel with reveal effect-->
-    <div class="panel panel-right panel-reveal dark">
+    <div class="panel panel-right panel-reveal dark pagePanel">
       <div class="view">
         <div class="page">
           <div class="navbar">
             <div class="navbar-bg"></div>
             <div class="navbar-inner">
-              <div class="title">Right Panel</div>
+              <div class="title">Panel</div>
             </div>
           </div>
           <div class="page-content">
-            <div class="block">Right panel content goes here</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="/about/" class="item-content item-link" @click="${closePanel}">
+                    <div class="item-inner">
+                      <div class="item-title">About</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/form/" class="item-content item-link" @click="${closePanel}">
+                    <div class="item-inner">
+                      <div class="item-title">Form</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/study/" class="item-content item-link" @click="${closePanel}">
+                    <div class="item-inner">
+                      <div class="item-title">Study</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" class="item-content item-link" @click="${closePanel}">
+                    <div class="item-inner">
+                      <div class="item-title">Home</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -124,6 +155,12 @@
         $f7.loginScreen.close();
       });
     }
+    const closePanel = () => {
+      const pagePanel = $f7.panel.get(".pagePanel")
+      console.log("pagePanel",pagePanel)
+      pagePanel.close();
+    }
+
     return $render;
   }
 </script>

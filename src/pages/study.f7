@@ -9,6 +9,11 @@
           </a>
         </div>
         <div class="title">JS学習用ページ</div>
+        <div class="right">
+          <a href="#" class="panel-open" data-panel="right">
+            遷移
+          </a>
+        </div>
       </div>
     </div>
     <div class="page-content">
@@ -22,8 +27,7 @@
         <div
         class="swiper swiper-init"
         data-pagination='{"el": ".swiper-pagination"}'  
-        data-navigation='{"nextEl":".swiper-button-next", "prevEl":".swiper-button-prev"}'
-        >
+        data-navigation='{"nextEl":".swiper-button-next", "prevEl":".swiper-button-prev"}'>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
