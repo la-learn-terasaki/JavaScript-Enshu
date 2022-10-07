@@ -157,7 +157,6 @@
     }
     const closePanel = () => {
       const pagePanel = $f7.panel.get(".pagePanel")
-      console.log("pagePanel",pagePanel)
       pagePanel.close();
     }
 
