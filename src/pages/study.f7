@@ -27,7 +27,8 @@
         <div
         class="swiper swiper-init"
         data-pagination='{"el": ".swiper-pagination"}'  
-        data-navigation='{"nextEl":".swiper-button-next", "prevEl":".swiper-button-prev"}'>
+        data-navigation='{"nextEl":".swiper-button-next", "prevEl":".swiper-button-prev"}'
+        data-loop="ture">
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
@@ -126,31 +127,25 @@
     getStudyItem()
     function getStudyItem() {
       studyItem.push($store.state.image.image_data)
-      console.log("study",studyItem)
       for(let i = 0; i < studyItem.length; i++){
         imageUrl.push(studyItem[i].image1)
         imageUrl.push(studyItem[i].image2)
         imageUrl.push(studyItem[i].image3)
-        console.log("imageUrl",imageUrl)
-      }
+      };
       $update();
     };
 
     // フォーム内容を取得
     getForm()
     function getForm() {
+      // ローカルストレージからJSONデータを取得
       let localForm = localStorage.getItem('formJson');
       if (localForm) {
-        // ローカルストレージからJSONデータを取得
-        console.log("localForm", localForm);
-
         // JSONデータをオブジェクトに変換
         array = JSON.parse(localForm);
-        console.log("array", array);
         
         // オブジェクトの値を配列として格納
         forms.push(array)
-        console.log("forms", forms);
       }
       else {
         let nullForm = new Object();
@@ -159,7 +154,6 @@
         nullForm.url = "";
         nullForm.password = "";
         nullForm.phone = "";
-        console.log("nullForm", nullForm)
         forms.push(array)
       };
       $update();
