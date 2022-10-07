@@ -110,7 +110,6 @@
 <script>
   export default() => {
     const test = 'hoge'
-    console.log('test', test)
     return $render
   }
 </script>
