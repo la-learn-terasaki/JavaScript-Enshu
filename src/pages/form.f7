@@ -92,12 +92,10 @@ const setForm = () =>{
 
   // オブジェクトをJSONに変換
   let formJson = JSON.stringify(form);
-  console.log("formJson", formJson);
 
   // JSONデータをローカルストレージに格納
   localStorage.setItem('formJson', formJson);
   let localData = localStorage.getItem('formJson');
-  console.log("localData", localData);
 };
 
   return $render;
