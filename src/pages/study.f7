@@ -4,7 +4,7 @@
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
         <div class="left">
-          <a href="#" class="link back">
+          <a href="#" class="link back" @click="${confettiStop}">
             戻る
           </a>
         </div>
@@ -109,9 +109,8 @@
     </div>
   </div>
 </template>
-
 <script>
-  export default (props, { $store, $update }) => {
+  export default (props, { $store, $update, $}) => {
 
     let studyItem = []
     let imageUrl = []
@@ -122,6 +121,7 @@
     const popup = () => {
       alert("test");
     };
+
 
     // イメージファイルの描画処理
     getStudyItem()
@@ -135,6 +135,7 @@
       $update();
     };
 
+    
     // フォーム内容を取得
     getForm()
     function getForm() {
@@ -158,6 +159,18 @@
       };
       $update();
     };
+
+
+    // 紙吹雪処理
+    setTimeout(function(){
+      // storeから紙吹雪を表示するコードを取得
+      $store.state.confettiStore()
+    },1000)
+
+    const confettiStop = () => {
+      // storeから紙吹雪を削除するコードを取得
+      $store.state.confettiStop();
+    }
     return $render;
   }
 </script>
