@@ -36,7 +36,7 @@
             ${imageUrl.map((item) => $h`
             <div class="swiper-slide">            
               <div class="study-photo">
-                <a href="${item.link_path}">
+                <a href="${item.link_path}" @click="${confettiStop}">
                   <img src="${item.image_url}"/>
                 </a>
               </div>           
@@ -135,7 +135,7 @@
       $update();
     };
 
-    
+
     // フォーム内容を取得
     getForm()
     function getForm() {
