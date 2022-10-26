@@ -162,10 +162,10 @@
 
 
     // 紙吹雪処理
-    setTimeout(function(){
-      // storeから紙吹雪を表示するコードを取得
+    confettiStart()
+    function confettiStart(){
       $store.state.confettiStore()
-    },1000)
+    }
 
     const confettiStop = () => {
       // storeから紙吹雪を削除するコードを取得
