@@ -137,7 +137,7 @@
   </div>
 </template>
 <script>
-  export default (props, { $f7, $update }) => {
+  export default (props, { $f7, $update, $store }) => {
     // Login screen demo data
     let username = '';
     let password = '';
@@ -158,8 +158,9 @@
     const closePanel = () => {
       const pagePanel = $f7.panel.get(".pagePanel")
       pagePanel.close();
+      // storeから紙吹雪を削除するコードを取得
+      $store.state.confettiStop();
     }
-
     return $render;
   }
 </script>

@@ -4,7 +4,7 @@
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
         <div class="left">
-          <a href="#" class="link back">
+          <a href="#" class="link back" @click="${confettiStop}">
             戻る
           </a>
         </div>
@@ -36,7 +36,7 @@
             ${imageUrl.map((item) => $h`
             <div class="swiper-slide">            
               <div class="study-photo">
-                <a href="${item.link_path}">
+                <a href="${item.link_path}" @click="${confettiStop}">
                   <img src="${item.image_url}"/>
                 </a>
               </div>           
@@ -109,9 +109,8 @@
     </div>
   </div>
 </template>
-
 <script>
-  export default (props, { $store, $update }) => {
+  export default (props, { $store, $update}) => {
 
     let studyItem = []
     let imageUrl = []
@@ -122,6 +121,7 @@
     const popup = () => {
       alert("test");
     };
+
 
     // イメージファイルの描画処理
     getStudyItem()
@@ -134,6 +134,7 @@
       };
       $update();
     };
+
 
     // フォーム内容を取得
     getForm()
@@ -158,6 +159,18 @@
       };
       $update();
     };
+
+
+    // 紙吹雪処理
+    confettiStart()
+    function confettiStart(){
+      $store.state.confettiStore()
+    }
+
+    const confettiStop = () => {
+      // storeから紙吹雪を削除するコードを取得
+      $store.state.confettiStop();
+    }
     return $render;
   }
 </script>
