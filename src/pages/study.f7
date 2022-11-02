@@ -112,7 +112,6 @@
 <script>
   export default (props, { $store, $update, $on}) => {
 
-    $update();
     let studyItem = []
     let imageUrl = []
     let array = []
@@ -171,7 +170,7 @@
     // 紙吹雪を停止・削除する
     const confettiStop = () => {
       // storeから紙吹雪を削除するコードを取得
-        $store.state.confettiStop();
+      $store.state.confettiStop();
     }
 
     return $render;
