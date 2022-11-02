@@ -166,6 +166,9 @@
     $on('pageAfterIn', (e,page) => {  // ページが呼び出された後に以下の処理を実行する
       $store.state.confettiStore()
     })
+    $on('pageAfterOut', (e,page) => {
+      $store.state.confettiStop();
+    })
 
     // 紙吹雪を停止・削除する
     const confettiStop = () => {
