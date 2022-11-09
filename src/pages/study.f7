@@ -4,7 +4,7 @@
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
         <div class="left">
-          <a href="#" class="link back" @click="${confettiStop}">
+          <a href="#" class="link back">
             戻る
           </a>
         </div>
@@ -36,7 +36,7 @@
             ${imageUrl.map((item) => $h`
             <div class="swiper-slide">            
               <div class="study-photo">
-                <a href="${item.link_path}" @click="${confettiStop}">
+                <a href="${item.link_path}">
                   <img src="${item.image_url}"/>
                 </a>
               </div>           
@@ -110,7 +110,7 @@
   </div>
 </template>
 <script>
-  export default (props, { $store, $update}) => {
+  export default (props, { $store, $update, $on}) => {
 
     let studyItem = []
     let imageUrl = []
@@ -162,21 +162,17 @@
 
 
     // 紙吹雪処理
-    confettiStart()
-    function confettiStart(){
+    // 紙吹雪を表示する
+    $on('pageAfterIn', (e,page) => {  // ページが呼び出された後に以下の処理を実行する
       $store.state.confettiStore()
-    }
+    })
 
-    const confettiStop = () => {
-      // storeから紙吹雪を削除するコードを取得
+    // 紙吹雪を停止・削除する
+    $on('pageBeforeOut', (e,page) => {
       $store.state.confettiStop();
-    }
+    })
+
     return $render;
   }
 </script>
 
-<!-- memo
-今後実装するかも
-・mapでラベル名と値を入力できるようにする
-　⇒ローカルストレージに入れる段階でラベル用と値用にデータを入力する（参考：app.js）
--->

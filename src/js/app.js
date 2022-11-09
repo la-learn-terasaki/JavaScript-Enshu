@@ -62,10 +62,6 @@ var app = new Framework7({
 
       // 紙吹雪表示処理
       const confettiAnime = () => {
-        // 紙吹雪を表示する場所を指定
-        var element = $('canvas');
-        element.attr('class','canvasStyle');
-
         // 紙吹雪の設定
         confetti({
           shapes:['square'],
@@ -91,7 +87,7 @@ var app = new Framework7({
       // 紙吹雪停止処理
       store.state.confettiStop = intervalClear
       function intervalClear() {
-        clearInterval(confetti_timer)
+        clearInterval(confetti_timer);
         confetti.reset();
       }
 

@@ -124,7 +124,6 @@
               <ul>
                 <li>
                   <a href="#" class="item-link list-button login-button" @click="${alertLoginData}">Sign In</a>
-
                 </li>
               </ul>
               <div class="block-footer">Some text about login information.<br/>Click "Sign In" to close Login Screen</div>
@@ -158,8 +157,6 @@
     const closePanel = () => {
       const pagePanel = $f7.panel.get(".pagePanel")
       pagePanel.close();
-      // storeから紙吹雪を削除するコードを取得
-      $store.state.confettiStop();
     }
     return $render;
   }

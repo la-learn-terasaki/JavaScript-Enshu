@@ -77,26 +77,26 @@
 <script>
 export default () => {
 
-// フォームをローカルストレージに保存
-const setForm = () =>{
-  // formのDOMを取得
-  const formElements = document.forms.myform;
+  // フォームをローカルストレージに保存
+  const setForm = () =>{
+    // formのDOMを取得
+    const formElements = document.forms.myform;
 
-  //フォームの値をオブジェクトとして格納
-  let form = new Object();
-  form.name = formElements.name.value;
-  form.email = formElements.email.value;
-  form.url = formElements.url.value;
-  form.password = formElements.password.value;
-  form.phone = formElements.phone.value;
+    //フォームの値をオブジェクトとして格納
+    let form = new Object();
+    form.name = formElements.name.value;
+    form.email = formElements.email.value;
+    form.url = formElements.url.value;
+    form.password = formElements.password.value;
+    form.phone = formElements.phone.value;
 
-  // オブジェクトをJSONに変換
-  let formJson = JSON.stringify(form);
+    // オブジェクトをJSONに変換
+    let formJson = JSON.stringify(form);
 
-  // JSONデータをローカルストレージに格納
-  localStorage.setItem('formJson', formJson);
-  let localData = localStorage.getItem('formJson');
-};
+    // JSONデータをローカルストレージに格納
+    localStorage.setItem('formJson', formJson);
+    let localData = localStorage.getItem('formJson');
+  };
 
   return $render;
 };
