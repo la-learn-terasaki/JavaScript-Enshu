@@ -1,0 +1,30 @@
+.boxs1{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    .bc1 {
+         padding: 30px 30px 30px 30px;
+        background   : red;
+    }
+    .bc2 {
+         padding:  30px 30px 30px 30px;
+        background   : blue;
+    }
+    .bc3 {
+         padding:  30px 30px 30px 30px;
+        background   : green;
+    }
+}
+.boxs2{
+    padding-top: 40px ;
+    display: flex;
+    justify-content: space-around;
+    .bc4 {
+         padding:  30px 30px 30px 30px;
+        background   : #ff7f7f;
+    }
+    .bc5 {
+         padding:  30px 30px 30px 30px; 
+        background   : #ff66ff;
+    }
+}
