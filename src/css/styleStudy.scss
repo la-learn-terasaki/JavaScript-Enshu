@@ -2,29 +2,29 @@
     padding-top: 40px;
     display: flex;
     justify-content: space-around;
-    .bc1 {
-         padding: 30px 30px 30px 30px;
-        background   : red;
+    .redBox {
+        padding: 30px;
+        background: red;
     }
-    .bc2 {
-         padding:  30px 30px 30px 30px;
-        background   : blue;
+    .blueBox {
+        padding:  30px;
+        background: blue;
     }
-    .bc3 {
-         padding:  30px 30px 30px 30px;
-        background   : green;
+    .greenBox {
+        padding:  30px;
+        background: green;
     }
 }
 .boxs2{
-    padding-top: 40px ;
+    padding-top: 40px;
     display: flex;
     justify-content: space-around;
-    .bc4 {
-         padding:  30px 30px 30px 30px;
-        background   : #ff7f7f;
+    .pinkBox {
+        padding:  30px;
+        background: pink;
     }
-    .bc5 {
-         padding:  30px 30px 30px 30px; 
-        background   : #ff66ff;
+    .violetBox {
+        padding:  30px; 
+        background: violet;
     }
 }
