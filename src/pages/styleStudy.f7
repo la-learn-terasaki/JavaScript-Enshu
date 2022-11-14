@@ -18,21 +18,14 @@
     </div>
     <div class="page-content">
       <div class="boxs1">
-        <div class="bc1"></div>
-        <div class="bc2"></div>
-        <div class="bc3"></div>
+        <div class="redBox"></div>
+        <div class="blueBox"></div>
+        <div class="greenBox"></div>
       </div>
       <div class="boxs2">
-        <div class="bc4"></div>
-        <div class="bc5"></div>
+        <div class="pinkBox"></div>
+        <div class="violetBox"></div>
       </div>    
     </div>
   </div>
 </template>
-<script>
-export default () => {
-
-return $render;
-}
-</script>
-
