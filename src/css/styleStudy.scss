@@ -1,5 +1,5 @@
-.boxs1{
-    padding-top: 40px;
+.upperBox{
+    margin: 30px;
     display: flex;
     justify-content: space-around;
     .redBox {
@@ -15,8 +15,8 @@
         background: green;
     }
 }
-.boxs2{
-    padding-top: 40px;
+.underBox{
+    margin: 30px;
     display: flex;
     justify-content: space-around;
     .pinkBox {
