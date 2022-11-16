@@ -1,0 +1,30 @@
+.upperBox {
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    .redBox {
+        padding: 30px;
+        background: red;
+    }
+    .blueBox {
+        padding: 30px;
+        background: blue;
+    }
+    .greenBox {
+        padding: 30px;
+        background: green;
+    }
+}
+.underBox {
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    .pinkBox {
+        padding: 30px;
+        background: pink;
+    }
+    .violetBox {
+        padding: 30px; 
+        background: violet;
+    }
+}

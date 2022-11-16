@@ -59,6 +59,13 @@
                     </div>
                   </a>
                 </li>
+                <li>
+                  <a href="/styleStudy/" class="item-content item-link" @click="${closePanel}">
+                    <div class="item-inner">
+                      <div class="item-title">StyleStudy</div>
+                    </div>
+                  </a>
+                </li>      
               </ul>
             </div>
           </div>
