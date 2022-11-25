@@ -25,7 +25,12 @@
       <div class="underBox">
         <div class="pinkBox"></div>
         <div class="violetBox"></div>
-      </div>    
+      </div>  
+      <div class="overBox">
+        <div class="redBox"></div>
+        <div class="violetBox"></div>
+        <div class="yellowBox"></div>
+      </div>
     </div>
   </div>
 </template>
