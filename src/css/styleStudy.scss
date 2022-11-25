@@ -28,3 +28,32 @@
         background: violet;
     }
 }
+.overBox {
+    margin: 30px;
+    padding: 60px;
+    position: relative;
+    .redBox {
+        position: absolute;
+        background: red;
+        padding: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .violetBox {
+        position: absolute;
+        padding: 40px;
+        top: 50%;
+        left: 50%;
+        background: violet;
+        transform: translate(-50%, -50%);
+    }
+    .yellowBox {
+        position: absolute;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        background: yellow;
+        transform: translate(-50%, -50%);
+    }
+}
