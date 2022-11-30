@@ -30,25 +30,23 @@
 }
 .overBox {
     margin: 30px;
-    padding: 60px;
-    position: relative;
-    .redBox {
+    .largeBox {
         position: absolute;
-        background: red;
         padding: 60px;
         top: 50%;
         left: 50%;
+        background: red;
         transform: translate(-50%, -50%);
     }
-    .violetBox {
+    .mediumBox {
         position: absolute;
         padding: 40px;
         top: 50%;
         left: 50%;
-        background: violet;
+        background: magenta;
         transform: translate(-50%, -50%);
     }
-    .yellowBox {
+    .smallBox {
         position: absolute;
         padding: 20px;
         top: 50%;
