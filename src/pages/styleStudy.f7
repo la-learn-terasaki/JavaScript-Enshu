@@ -27,9 +27,9 @@
         <div class="violetBox"></div>
       </div>  
       <div class="overBox">
-        <div class="redBox"></div>
-        <div class="violetBox"></div>
-        <div class="yellowBox"></div>
+        <div class="largeBox"></div>
+        <div class="mediumBox"></div>
+        <div class="smallBox"></div>
       </div>
     </div>
   </div>
