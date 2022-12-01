@@ -26,6 +26,11 @@
         <div class="pinkBox"></div>
         <div class="violetBox"></div>
       </div>    
+      <div class="overBox">
+        <div class="largeBox"></div>
+        <div class="mediumBox"></div>
+        <div class="smallBox"></div>
+      </div>
     </div>
   </div>
 </template>
