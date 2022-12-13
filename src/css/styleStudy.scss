@@ -29,29 +29,27 @@
     }
 }
 .overBox {
-    margin: 30px;
+    display: flex;
+    justify-content: center;
     .largeBox {
-        position: absolute;
         padding: 60px;
-        top: 50%;
-        left: 50%;
         background: red;
-        transform: translate(-50%, -50%);
-    }
-    .mediumBox {
-        position: absolute;
-        padding: 40px;
-        top: 50%;
-        left: 50%;
-        background: magenta;
-        transform: translate(-50%, -50%);
-    }
-    .smallBox {
-        position: absolute;
-        padding: 20px;
-        top: 50%;
-        left: 50%;
-        background: yellow;
-        transform: translate(-50%, -50%);
+        position: relative;
+        .mediumBox {
+            padding: 40px;
+            background: magenta;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .smallBox {
+            padding: 20px;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
     }
 }
