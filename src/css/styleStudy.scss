@@ -28,3 +28,28 @@
         background: violet;
     }
 }
+.overBox {
+    display: flex;
+    justify-content: center;
+    .largeBox {
+        padding: 60px;
+        background: red;
+        position: relative;
+        .mediumBox {
+            padding: 40px;
+            background: magenta;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .smallBox {
+            padding: 20px;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
