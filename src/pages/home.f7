@@ -56,7 +56,6 @@
               </div>
             </a>
           </li>
-
           <li>
             <a href="/study/" class="item-content item-link">
               <div class="item-inner">
@@ -64,10 +63,15 @@
               </div>
             </a>
           </li>
-
+          <li>
+            <a href="/styleStudy/" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">StyleStudy</div>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
-
       <div class="block-title">Modals</div>
       <div class="block block-strong">
         <div class="row">
@@ -79,7 +83,6 @@
           </div>
         </div>
       </div>
-
       <div class="block-title">Panels</div>
       <div class="block block-strong">
         <div class="row">

@@ -1,0 +1,55 @@
+.upperBox {
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    .redBox {
+        padding: 30px;
+        background: red;
+    }
+    .blueBox {
+        padding: 30px;
+        background: blue;
+    }
+    .greenBox {
+        padding: 30px;
+        background: green;
+    }
+}
+.underBox {
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    .pinkBox {
+        padding: 30px;
+        background: pink;
+    }
+    .violetBox {
+        padding: 30px; 
+        background: violet;
+    }
+}
+.overBox {
+    display: flex;
+    justify-content: center;
+    .largeBox {
+        padding: 60px;
+        background: red;
+        position: relative;
+        .mediumBox {
+            padding: 40px;
+            background: magenta;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .smallBox {
+            padding: 20px;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}

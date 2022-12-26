@@ -9,6 +9,7 @@ import 'framework7/css/bundle';
 import '../css/icons.css';
 import '../css/app.scss';
 import '../css/study.scss';
+import '../css/styleStudy.scss';
 // Import Cordova APIs
 import cordovaApp from './cordova-app.js';
 
