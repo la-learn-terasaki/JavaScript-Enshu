@@ -1,0 +1,37 @@
+<template>
+  <div class="page" data-name="study">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            戻る
+          </a>
+        </div>
+        <div class="title">JS学習用ページ</div>
+        <div class="right">
+          <a href="#" class="panel-open" data-panel="right">
+            遷移
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="upperBox">
+        <div class="redBox"></div>
+        <div class="blueBox"></div>
+        <div class="greenBox"></div>
+      </div>
+      <div class="underBox">
+        <div class="pinkBox"></div>
+        <div class="violetBox"></div>
+      </div>    
+      <div class="overBox">
+        <span class="largeBox">
+          <span class="mediumBox"></span>
+          <span class="smallBox"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</template>

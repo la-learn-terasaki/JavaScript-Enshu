@@ -1,0 +1,178 @@
+<template>
+  <div class="page" data-name="study">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            戻る
+          </a>
+        </div>
+        <div class="title">JS学習用ページ</div>
+        <div class="right">
+          <a href="#" class="panel-open" data-panel="right">
+            遷移
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="study-text">
+        <p @click="${popup}">
+          アラートを出力します
+        </p>
+      </div>
+      <div>
+        ${imageUrl[0] && $h`
+        <div
+        class="swiper swiper-init"
+        data-pagination='{"el": ".swiper-pagination"}'  
+        data-navigation='{"nextEl":".swiper-button-next", "prevEl":".swiper-button-prev"}'
+        data-loop="ture">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            ${imageUrl.map((item) => $h`
+            <div class="swiper-slide">            
+              <div class="study-photo">
+                <a href="${item.link_path}">
+                  <img src="${item.image_url}"/>
+                </a>
+              </div>           
+            </div>
+            `)}
+          </div>
+        </div>
+        `}
+      </div>
+      <div class="list no-hairlines-md">
+        ${forms[0] && $h`
+        <div>
+          ${forms.map((item) => $h`
+          <ul>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Name</div>
+                  <div class="item-input-wrap">
+                    <input type="text" name="name" value="${item.name}" placeholder="Your name"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">E-mail</div>
+                  <div class="item-input-wrap">
+                    <input type="email" name="email" value="${item.email}" placeholder="E-mail"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">URL</div>
+                  <div class="item-input-wrap">
+                    <input type="url" name="url" value="${item.url}" placeholder="URL"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Password</div>
+                  <div class="item-input-wrap">
+                    <input type="password" name="password" value="${item.password}" placeholder="Password"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Phone</div>
+                  <div class="item-input-wrap">
+                    <input type="tel" name="phone" value="${item.phone}" placeholder="Phone"/>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          `)}
+        </div>
+        `}
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default (props, { $store, $update, $on}) => {
+
+    let studyItem = []
+    let imageUrl = []
+    let array = []
+    let forms = []
+
+    // アラートの作成
+    const popup = () => {
+      alert("test");
+    };
+
+
+    // イメージファイルの描画処理
+    getStudyItem()
+    function getStudyItem() {
+      studyItem.push($store.state.image.image_data)
+      for(let i = 0; i < studyItem.length; i++){
+        imageUrl.push(studyItem[i].image1)
+        imageUrl.push(studyItem[i].image2)
+        imageUrl.push(studyItem[i].image3)
+      };
+      $update();
+    };
+
+
+    // フォーム内容を取得
+    getForm()
+    function getForm() {
+      // ローカルストレージからJSONデータを取得
+      let localForm = localStorage.getItem('formJson');
+      if (localForm) {
+        // JSONデータをオブジェクトに変換
+        array = JSON.parse(localForm);
+        
+        // オブジェクトの値を配列として格納
+        forms.push(array)
+      }
+      else {
+        let nullForm = new Object();
+        nullForm.name = "";
+        nullForm.email = "";
+        nullForm.url = "";
+        nullForm.password = "";
+        nullForm.phone = "";
+        forms.push(array)
+      };
+      $update();
+    };
+
+
+    // 紙吹雪処理
+    // 紙吹雪を表示する
+    $on('pageAfterIn', (e,page) => {  // ページが呼び出された後に以下の処理を実行する
+      $store.state.confettiStore()
+    })
+
+    // 紙吹雪を停止・削除する
+    $on('pageBeforeOut', (e,page) => {
+      $store.state.confettiStop();
+    })
+
+    return $render;
+  }
+</script>
+
